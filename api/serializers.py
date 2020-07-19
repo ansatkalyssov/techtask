@@ -12,6 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         exclude = ()
 
+    # в этой функции мы проверяем размер и формат изображения
     def validate(self, data):
         if 'avatar' in data and data['avatar']:
             file_name = str(data['avatar'])

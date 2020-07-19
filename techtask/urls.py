@@ -22,6 +22,6 @@ from techtask import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(api_urls, namespace='api')),
-    path('', include(core_urls, namespace='core')),
+    path('', include(api_urls, namespace='api')),
+    # path('', include(core_urls, namespace='core')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
